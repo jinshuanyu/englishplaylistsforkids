@@ -28,19 +28,27 @@
   <header class="bg-white shadow-sm">
     <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
       <h1 class="text-2xl font-bold text-center text-gray-900">英語教育影片推薦</h1>
-      <p class="mt-2 text-center text-base text-gray-600">整理分享網路英語教育影片資源</p>
+      <p class="mt-2 text-center text-base text-gray-600">分享免費網上英語教育影片資源</p>
     </div>
   </header>
 
   <!-- 分頁導覽列 -->
   <div class="bg-white border-b border-gray-200 sticky top-0 z-10">
 <nav class="-mb-px flex justify-center flex-wrap gap-2 sm:space-x-8" aria-label="Tabs">
-  <button class="tab-btn text-indigo-600 border-indigo-500 whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="science">科學 × 技術<br>STEM</button>
-  <button class="tab-btn text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="society">社會 × 探索<br>Society & Exploration</button>
-
-  <button class="tab-btn text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="language">語言 × 文學<br>Language Arts</button>
-  <button class="tab-btn text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="toddlers">幼幼片單（2–5）<br>For Toddlers</button>
+  <button class="tab-btn text-indigo-600 border-indigo-500 whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="science" aria-selected="true">
+    科學 × 技術<br>STEM
+  </button>
+  <button class="tab-btn text-gray-500 hover:text-gray-700 hover:border-gray-300 border-transparent whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="society" aria-selected="false">
+    社會 × 探索<br>Society & Exploration
+  </button>
+  <button class="tab-btn text-gray-500 hover:text-gray-700 hover:border-gray-300 border-transparent whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="music" aria-selected="false">
+    語言 × 文學<br>Language Arts
+  </button>
+  <button class="tab-btn text-gray-500 hover:text-gray-700 hover:border-gray-300 border-transparent whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="toddlers" aria-selected="false">
+    幼幼片單（2–5）<br>For Toddlers
+  </button>
 </nav>
+
 
   </div>
 
@@ -425,7 +433,7 @@
     </section>
 
 <!-- ======================= 社會時事型內容分頁 ======================= -->
-    <section id="society" class="tab-content active">
+    <section id="society" class="tab-content">
       <!-- 標籤篩選列（依需要自行增減 tag） -->
       <div class="mb-6 flex flex-wrap items-center gap-2">
         <span class="text-sm text-gray-600">快速篩選：</span>
@@ -744,7 +752,7 @@
     </section>
 
     <!-- ======================= 語言分頁 ======================= -->
-    <section id="language" class="tab-content">
+    <section id="music" class="tab-content">
       <div class="mb-6 flex flex-wrap items-center gap-2">
         <span class="text-sm text-gray-600">快速篩選：</span>
         <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="繪本朗讀">繪本朗讀</button>
@@ -1341,73 +1349,41 @@ PBS Kids 的教育卡通，故事書村的
 
 
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const tabs = document.querySelectorAll('.tab-btn');
-    const sections = document.querySelectorAll('.tab-content');
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs = document.querySelectorAll('.tab-btn');
+  const sections = document.querySelectorAll('.tab-content');
 
-    function activateTab(id){
-      tabs.forEach(t=>{
-        const on = t.dataset.tab === id;
-        t.classList.toggle('text-indigo-600', on);
-        t.classList.toggle('border-indigo-500', on);
-        t.classList.toggle('text-gray-500', !on);
-      });
-      sections.forEach(s=>s.classList.toggle('active', s.id === id));
-      history.replaceState(null, '', '#' + id);
-    }
-
+  function activateTab(id){
     tabs.forEach(t=>{
-      t.addEventListener('click', ()=> activateTab(t.dataset.tab));
-    });
+      const isActive = (t.dataset.tab === id);
+      // 清理兩種狀態會互斥的 class
+      t.classList.remove('text-indigo-600','border-indigo-500');
+      t.classList.remove('text-gray-500','hover:text-gray-700','hover:border-gray-300','border-transparent');
 
-    // 支援網址直達 #tab
-    const initial = location.hash.replace('#','') || 'knowledge';
-    if (document.getElementById(initial)) activateTab(initial);
-
-    // —— 標籤篩選（在各分頁內生效）——
-    const allSections = Array.from(sections);
-    allSections.forEach(section=>{
-      const grid = section.querySelector('.grid');
-      if (!grid) return;
-
-      const tagButtons = section.querySelectorAll('.tag-btn, .tag-chip');
-      const clearBtn = section.querySelector('.clear-tags');
-
-      let activeTag = null;
-
-      function applyFilter(){
-        const cards = grid.querySelectorAll('article');
-        cards.forEach(card=>{
-          const tags = (card.getAttribute('data-tags') || '').split(',').map(s=>s.trim());
-          const show = !activeTag || tags.includes(activeTag);
-          card.style.display = show ? '' : 'none';
-        });
-        // 標記按鈕狀態
-        section.querySelectorAll('.tag-btn, .tag-chip').forEach(b=>{
-          const pressed = b.getAttribute('data-tag') === activeTag;
-          b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
-        });
-      }
-
-      tagButtons.forEach(btn=>{
-        btn.addEventListener('click', ()=>{
-          const t = btn.getAttribute('data-tag');
-          activeTag = (activeTag === t) ? null : t; // 再次點擊取消
-          applyFilter();
-        });
-      });
-
-      if (clearBtn) {
-        clearBtn.addEventListener('click', ()=>{
-          activeTag = null;
-          applyFilter();
-        });
+      if (isActive) {
+        // 作用中：靛藍字＋靛藍底線（不需要灰色 hover 樣式）
+        t.classList.add('text-indigo-600','border-indigo-500');
+        t.setAttribute('aria-selected','true');
+      } else {
+        // 非作用中：灰字＋灰色 hover 邊框＋透明底線
+        t.classList.add('text-gray-500','hover:text-gray-700','hover:border-gray-300','border-transparent');
+        t.setAttribute('aria-selected','false');
       }
     });
-  });
-  </script>
+
+    sections.forEach(s=>s.classList.toggle('active', s.id === id));
+    history.replaceState(null, '', '#' + id);
+  }
+
+  tabs.forEach(t=> t.addEventListener('click', ()=> activateTab(t.dataset.tab)));
+
+  // 支援 #hash 直達 + 頁面初始狀態
+  const initial = location.hash.replace('#','') || 'science';
+  if (document.getElementById(initial)) activateTab(initial);
+});
+</script>
+
 </body>
 </html>
-
 
 
