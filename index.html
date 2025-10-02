@@ -41,7 +41,7 @@
   <button class="tab-btn text-gray-500 hover:text-gray-700 hover:border-gray-300 border-transparent whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="society" aria-selected="false">
     社會 × 探索<br>Society & Exploration
   </button>
-  <button class="tab-btn text-gray-500 hover:text-gray-700 hover:border-gray-300 border-transparent whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="music" aria-selected="false">
+  <button class="tab-btn text-gray-500 hover:text-gray-700 hover:border-gray-300 border-transparent whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="language" aria-selected="false">
     語言 × 文學<br>Language Arts
   </button>
   <button class="tab-btn text-gray-500 hover:text-gray-700 hover:border-gray-300 border-transparent whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="toddlers" aria-selected="false">
@@ -752,7 +752,7 @@
     </section>
 
     <!-- ======================= 語言分頁 ======================= -->
-    <section id="music" class="tab-content">
+    <section id="language" class="tab-content">
       <div class="mb-6 flex flex-wrap items-center gap-2">
         <span class="text-sm text-gray-600">快速篩選：</span>
         <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="繪本朗讀">繪本朗讀</button>
@@ -1350,90 +1350,112 @@ PBS Kids 的教育卡通，故事書村的
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  // —— 分頁 —— //
+  // === Tabs ===
   const tabs = Array.from(document.querySelectorAll('.tab-btn'));
   const sections = Array.from(document.querySelectorAll('.tab-content'));
 
+  // 只保留一個 active（就算 HTML 標了多個）
+  let htmlActive = sections.find(sec => sec.classList.contains('active')) || sections[0];
+  sections.forEach(sec => sec.classList.remove('active'));
+  if (htmlActive) htmlActive.classList.add('active');
+
+  // 非作用中分頁 -> iframe src 改 data-src；作用中 -> lazy
+  sections.forEach(sec => {
+    const isActive = sec.classList.contains('active');
+    sec.querySelectorAll('iframe').forEach(f => {
+      if (isActive) {
+        f.setAttribute('loading','lazy');
+        f.setAttribute('allow','autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      } else {
+        const s = f.getAttribute('src');
+        if (s) { f.setAttribute('data-src', s); f.removeAttribute('src'); }
+      }
+    });
+  });
+
+  function setTabVisual(btn, on){
+    btn.classList.toggle('text-indigo-600', on);
+    btn.classList.toggle('border-indigo-500', on);
+    btn.classList.toggle('text-gray-500', !on);
+    btn.classList.toggle('border-transparent', !on);
+    btn.classList.toggle('hover:text-gray-700', !on);
+    btn.classList.toggle('hover:border-gray-300', !on);
+    btn.setAttribute('aria-selected', on ? 'true' : 'false');
+  }
+
+  function loadIframes(section){
+    section.querySelectorAll('iframe').forEach(f=>{
+      if (!f.getAttribute('src') && f.getAttribute('data-src')) {
+        f.setAttribute('src', f.getAttribute('data-src'));
+      }
+      f.setAttribute('loading','lazy');
+    });
+  }
+
+  function unloadIframes(section){
+    section.querySelectorAll('iframe').forEach(f=>{
+      const src = f.getAttribute('src');
+      if (src) { f.setAttribute('data-src', src); f.removeAttribute('src'); }
+    });
+  }
+
   function activateTab(id){
-    tabs.forEach(btn=>{
-      const on = btn.dataset.tab === id;
-      btn.classList.toggle('text-indigo-600', on);
-      btn.classList.toggle('border-indigo-500', on);
-      btn.classList.toggle('text-gray-500', !on);
-      btn.classList.toggle('hover:text-gray-700', !on);
-      btn.classList.toggle('hover:border-gray-300', !on);
-      btn.classList.toggle('border-transparent', !on);
-      btn.setAttribute('aria-selected', on ? 'true' : 'false');
-    });
+    tabs.forEach(btn => setTabVisual(btn, btn.dataset.tab === id));
     sections.forEach(sec=>{
-      sec.classList.toggle('active', sec.id === id);
+      const on = sec.id === id;
+      sec.classList.toggle('active', on);
+      if (on) loadIframes(sec); else unloadIframes(sec);
     });
+    // 不改瀏覽器歷史（避免返回鍵混亂）
     history.replaceState(null, '', '#' + id);
   }
 
-  // 初始化分頁（確保非作用中標籤有透明底線，避免看起來「不變色」）
+  // 綁定 tab click
   tabs.forEach(btn=>{
-    if (!btn.classList.contains('border-indigo-500')) {
-      btn.classList.add('border-transparent');
-    }
+    if (!btn.classList.contains('border-indigo-500')) btn.classList.add('border-transparent');
     btn.addEventListener('click', () => activateTab(btn.dataset.tab));
   });
-  const initial = location.hash.replace('#','') || tabs[0]?.dataset.tab || 'science';
-  if (document.getElementById(initial)) activateTab(initial);
 
-  // —— 標籤篩選（多選＝AND）——
-  // 對每個分頁 section 各自管理一組選中的標籤
+  // 依 hash 直達
+  const initialId = (location.hash.replace('#','') || tabs[0]?.dataset.tab || sections[0]?.id);
+  if (initialId && document.getElementById(initialId)) activateTab(initialId);
+
+  // === Tags filter (multi-select AND) ===
   sections.forEach(section=>{
     const grid = section.querySelector('.grid');
     if (!grid) return;
-
     const tagButtons = Array.from(section.querySelectorAll('.tag-btn, .tag-chip'));
     const clearBtn = section.querySelector('.clear-tags');
-    const selected = new Set(); // 此分頁的選中標籤
+    const selected = new Set();
 
-    function getCardTags(card){
-      return (card.getAttribute('data-tags') || '')
-        .split(',')
-        .map(s=>s.trim())
-        .filter(Boolean);
-    }
+    const getCardTags = (card) =>
+      (card.getAttribute('data-tags') || '')
+        .split(',').map(s=>s.trim()).filter(Boolean);
 
     function applyFilter(){
+      const arr = [...selected];
       const cards = Array.from(grid.querySelectorAll('article[data-tags]'));
-      const selectedArr = Array.from(selected);
-
       cards.forEach(card=>{
         const tags = getCardTags(card);
-        const show = selectedArr.length === 0 || selectedArr.every(t => tags.includes(t));
+        const show = arr.length === 0 || arr.every(t => tags.includes(t));
         card.style.display = show ? '' : 'none';
       });
-
-      // 同步按鈕 aria-pressed 狀態
       tagButtons.forEach(b=>{
         const t = b.getAttribute('data-tag');
-        const pressed = selected.has(t);
-        b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+        b.setAttribute('aria-pressed', selected.has(t) ? 'true' : 'false');
       });
     }
 
     tagButtons.forEach(btn=>{
       const t = btn.getAttribute('data-tag');
-      // 初始化 aria-pressed
-      btn.setAttribute('aria-pressed', 'false');
-
+      btn.setAttribute('aria-pressed','false');
       btn.addEventListener('click', ()=>{
-        if (selected.has(t)) selected.delete(t);
-        else selected.add(t);
+        if (selected.has(t)) selected.delete(t); else selected.add(t);
         applyFilter();
       });
     });
 
-    if (clearBtn) {
-      clearBtn.addEventListener('click', ()=>{
-        selected.clear();
-        applyFilter();
-      });
-    }
+    if (clearBtn) clearBtn.addEventListener('click', ()=>{ selected.clear(); applyFilter(); });
   });
 });
 </script>
