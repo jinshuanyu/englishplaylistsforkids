@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>兒童英語影片推薦</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+<!-- Font Awesome 圖示套件 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body { font-family: 'Inter','Noto Sans TC',sans-serif; }
+    .aspect-video-container { position:relative;width:100%;padding-bottom:56.25%;height:0; }
+    .aspect-video-container iframe { position:absolute;inset:0;width:100%;height:100%; }
+    .tab-content { display:none; }
+    .tab-content.active { display:block; }
+    .tag-btn[aria-pressed="true"] { outline: 2px solid rgb(99 102 241); }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- 頁首 -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold text-center text-gray-900">兒童英語影片推薦</h1>
+      <p class="mt-2 text-center text-base text-gray-600">分享我和孩子喜歡的內容，依類型整理。</p>
+    </div>
+  </header>
+
+  <!-- 分頁導覽列 -->
+  <div class="bg-white border-b border-gray-200 sticky top-0 z-10">
+<nav class="-mb-px flex justify-center flex-wrap gap-2 sm:space-x-8" aria-label="Tabs">
+  <button class="tab-btn text-indigo-600 border-indigo-500 whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="science">科學 × 技術<br>STEM</button>
+  <button class="tab-btn text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="society">社會 × 探索<br>Society & Exploration</button>
+
+  <button class="tab-btn text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="music">語言 × 文學<br>Language Arts</button>
+  <button class="tab-btn text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-3 border-b-2 font-medium text-sm" data-tab="toddlers">幼幼片單（2–5）<br>For Toddlers</button>
+</nav>
+
+  </div>
+
+  <!-- 主要內容 -->
+  <main class="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+
+    <!-- ======================= 科學型內容分頁 ======================= -->
+    <section id="science" class="tab-content active">
+      <!-- 標籤篩選列（依需要自行增減 tag） -->
+      <div class="mb-6 flex flex-wrap items-center gap-2">
+        <span class="text-sm text-gray-600">快速篩選：</span>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="科普">科普</button>
+
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="英式發音">英式發音</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="美式發音">美式發音</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="動物">動物</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="工程">工程</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="卡通">卡通</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="真人">真人</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="紀錄片">紀錄片</button>
+        <button class="clear-tags rounded-full px-3 py-1 text-xs bg-white border text-gray-600">清除</button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- Do You Know? (BBC)｜S1 官方播放清單 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="科普,工程,真人,英式發音">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLcKR75Fc16XzUpj4LDyHn3fzHjli_vqJH"
+      title="Do You Know? Season 1 - Playlist (BBC/CBeebies)" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="科普">科普</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英式發音">英式發音</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="真人">真人</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="工程">工程</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Do You Know?｜怎麼運作？</h3>
+    <p class="mt-3 text-gray-700">
+      BBC 製作的兒童節目，約 15 分鐘一集，<strong>每次介紹兩樣東西的操作原理或到工廠參觀製作過程</strong>（例：電扶梯、充氣城堡…）。<br>
+      共 4 季，<strong>YouTube 目前免費釋出前兩季</strong>。林寶超愛主持人 Maddie Moate，我們還追她的個人頻道與 Podcast（可惜已停更）。
+    </p>
+  </div>
+</article>
+        
+        <!-- 新增卡片 #3: Wild Kratts -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                 data-tags="科普,卡通,動物,美式發音">
+          <div class="aspect-video-container">
+            <!-- 官方清單（PBS KIDS 提供）。如需替換其他季，僅改 list=... -->
+            <iframe src="https://www.youtube.com/embed/videoseries?si=CXwBhI77KLoFU1XQ&amp;list=PLP4H73sp9PL-Do1rreTW9r8Zy_H12pRge"
+              title="Wild Kratts - Playlist" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <div class="p-6 flex-grow">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="科普">科普</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="動物">動物</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900">Wild Kratts｜動物科普卡通</h3>
+            <p class="mt-3 text-gray-700">
+              PBS KIDS 台播放，<strong>由加拿大動物學家 Kratt 兩兄弟創作</strong>，故事主角就是他們的化身（長得也很像本尊！）。
+              在卡通裡他們可以「變身」，借助各種動物能力（<em>creature power</em>）化解危機，邊看邊學動物知識。
+            </p>
+          </div>
+        </article>
+
+        <!-- Dr. Binocs Show｜印度科普卡通 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="科普,卡通">
+  <a href="https://www.youtube.com/playlist?list=PLmJ33rwb1zZbbuQzbXu9TMxbfxirwtf7i" target="_blank" rel="noopener" class="block aspect-video-container">
+    <img src="https://img.youtube.com/vi/HaEmIakO7f4/maxresdefault.jpg" 
+         alt="Dr. Binocs Show Playlist" class="absolute inset-0 w-full h-full object-cover">
+  </a>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="科普">科普</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-rose-700" data-tag="卡通">卡通</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">The Dr. Binocs Show｜「望遠鏡」教授</h3>
+    <p class="mt-3 text-gray-700">
+      兩寶叫他「鬍子手」。<strong>印度製作的科普節目</strong>，主角造型像長鬍子的望遠鏡 binoculars。<strong>有些集數主題略可怕，要挑一下</strong>；
+      印度口音我覺得滿明顯、重音語調不見得「標準」，但兩寶完全不受影響，看得很開心。林二寶甚至會突然用英語發表對抗
+      climate change 的小演說。
+    </p>
+  </div>
+</article>
+
+        
+        <!-- Messy Goes to Okido｜S2 官方清單 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="科普,卡通,英式發音,">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?si=yWyoXnrKyvBEkQM3&amp;list=PL3flvv2jWwxZEMj8VK51FFkyGUveLtg4y"
+      title="Messy Goes to OKIDO - Season 2 Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="科普">科普</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英式發音">英式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Messy Goes to Okido｜梅西去 OKIDO</h3>
+    <p class="mt-3 text-gray-700">
+      英國學前科普雜誌衍生卡通。主角 Messy 是床底下的藍色小怪獸，看到按鈕就想按：<strong>"Must... press... button!"</strong>，
+      常常亂按引發意外，再和朋友一起解惑。<br>
+      兩寶很愛看這個搞笑的科普冒險。
+    </p>
+  </div>
+</article>
+
+<!-- Peep and the Big Wide World｜可愛又幽默的幼兒科普卡通 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="科普,卡通,美式發音">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL1A73B8BE1CECD4C6"
+      title="Peep and the Big Wide World Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="科普">科普</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-rose-700" data-tag="卡通">卡通</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Peep and the Big Wide World｜小皮大世界</h3>
+    <p class="mt-3 text-gray-700">
+      獲得老師、家長推薦的學前幼兒科普節目。2004 年出品，<strong>三隻小鳥的極簡角色設計＋基礎數理概念</strong>，至今仍不覺過時。
+      <br>最大亮點是超搞笑的鴨子 Quack，我們全家常笑到停不下來。
+    </p>
+
+    <ul class="list-disc text-lg font-bold list-inside text-indigo-600 mt-2 space-y-1">
+      🌐 <a href="http://www.peepandthebigwideworld.com/en/" target="_blank" rel="noopener" class="text-indigo-600 hover:underline">Peep and the Big Wide World 官網</a><br>
+▶️<a href="https://www.momokids.com.tw/program-video-list-in.php?page=1&qpmid=1&pgname=&lmenuid=1&smenuid=0&tmenuid=0&mseason=1&infoid=153" target="_blank" rel="noopener" class="text-indigo-600 hover:underline">Momo 親子台中文版《小皮大世界》全集數</a>
+    </ul>
+  </div>
+</article>
+
+<!-- Science Videos for Kids（Learn Bright）｜主題概念清單 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="科普,概念教學,英文,詞彙,短片">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLyqf1JCzOf_nBNCibt2BQi-hLBCzgHrMt"
+      title="Science Videos for Kids - Learn Bright Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="科普">科普</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Science Videos for Kids（Learn Bright）</h3>
+    <p class="mt-3 text-gray-700">
+      每集約 6–10 分鐘，<strong>一次介紹一個概念，深入淺出</strong>。主題之間有關聯，看久了就會記住光合作用、二氧化碳等常見詞彙。
+    </p>
+  </div>
+</article>
+
+<!-- Ada Twist, Scientist｜YouTube 清單 + Netflix 續作連結 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="科普,卡通,實驗,問題解決,歌曲,Netflix">
+  <div class="aspect-video-container">
+    <!-- 使用 Netflix Jr. 官方 Ada Twist 播放清單 -->
+    <iframe src="https://www.youtube.com/embed/P1V2AZKuQkc?si=VeXYVQSAlMvqKVjQ"
+      title="Ada Twist, Scientist - Netflix Jr. Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="科普">科普</button>
+                            <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Ada Twist, Scientist｜我做得到！小科學家艾達</h3>
+    <p class="mt-3 text-gray-700">
+      同名繪本延伸影集，共 4 季。故事圍繞 Ada 和朋友們：<strong>發現問題 → 提出假設 → 做實驗 → 找到方法</strong>。我很喜歡裡面幾首歌，
+      特別是有人一直失敗、覺得挫折時的 <em>“Don't Give Up” Try Again Song</em>。<br>
+<ul class="list-disc text-lg font-bold list-inside text-indigo-600 mt-2 space-y-1">
+      ▶️ Netflix：<a class="text-indigo-600 hover:text-indigo-800 underline" href="https://www.netflix.com/title/80198673" target="_blank" rel="noopener">Ada Twist, Scientist</a> </ul>
+    </p>
+  </div>
+</article>
+
+<!-- Magic School Bus（經典）｜YouTube 舊作清單 + Netflix 續作外連 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="科普,卡通,經典,戶外教學,太空/人體">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLCeScks4FrgKjogDxvR7Ei3cUlkqTdJRc"
+      title="The Magic School Bus - Classic Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="科普">科普</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Magic School Bus｜魔法校車</h3>
+    <p class="mt-3 text-gray-700">
+      經典中的經典：老師開著會變形的校車，<strong>帶整班同學去太空、進人體</strong>做戶外教學。<br>
+<ul class="list-disc text-lg font-bold list-inside text-indigo-600 mt-2 space-y-1">
+
+      ▶️ Netflix：續作 <a class="text-indigo-600 hover:text-indigo-800 underline" href="https://www.netflix.com/title/80108373" target="_blank" rel="noopener">The Magic School Bus Rides Again</a> </ul>
+    </p>
+  </div>
+</article>
+
+<!-- SciShow Kids｜官方主清單 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="科普,美式發音,真人,">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLw2cuKNQvZ2eSmeWhxqog5z57wq_sQjl2"
+      title="SciShow Kids - Main Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="科普">科普</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="真人">真人</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">SciShow Kids</h3>
+    <p class="mt-3 text-gray-700">
+      科普概念解說影片，影片集數很多、主題多元，<strong>真人解說 + 布偶 Squeak</strong> 配合演出，講解清楚。主持人語速稍快。
+    </p>
+  </div>
+</article>
+
+
+
+<!-- Science Max｜Full Episodes 官方清單 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="科普,真人,美式發音">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLY2vSQEVraKBRm12qORAXtImpDSq_wQ7w"
+      title="Science Max | FULL EPISODES Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="科普">科普</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="真人">真人</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Science Max｜科學無限大</h3>
+    <p class="mt-3 text-gray-700">
+      加拿大的科學實驗節目，<strong>真人示範＋放大版實驗</strong>，不少集數在安大略科學中心拍攝。
+    </p>
+  </div>
+</article>
+
+<!-- Operation Ouch｜人體科學（CBBC 播放清單） -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="科普,人體,真人,英式發音">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLk2uTpq_0-GWLFPdpZ5AQPS1Lz0LXwIIt"
+      title="Operation Ouch! - CBBC Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+ <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="科普">科普</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="人體">人體</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英式發音">英式發音</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="真人">真人</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Operation Ouch｜人體奧奇實驗室</h3>
+    <p class="mt-3 text-gray-700">
+      雙胞胎醫生主持、拿過 BAFTA 兒少節目獎。會帶大家進醫院看傷口處理、做實驗、<strong>用趣味方式認識人體科學</strong>；
+      我們之前在 MOD 的達文西頻道看過幾集，兩寶很喜歡。
+    </p>
+  </div>
+</article>
+
+
+
+
+
+
+
+<!-- Our Planet｜我們的星球 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="科普,英式發音,紀錄片">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLydZ2Hrp_gPS1DRwFcowNTRNR1B9QbPm3"
+      title="Our Planet Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="紀錄片">紀錄片</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="科普">科普</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英式發音">英式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">🌏 Our Planet 《我們的星球》</h3>
+    <p class="mt-3 text-gray-700">
+      由 Sir David Attenborough 配音的 Netflix 科學紀錄片 <em>Our Planet</em>，已在 YouTube 免費開放全套播放。<br>
+      官方網站提供教學資源：主題短片、互動地球儀、行動指南，也出版兒童讀物。
+
+    </p>
+     <ul class="list-disc text-lg font-bold list-inside text-indigo-600 mt-2 space-y-1">
+      🌐<a href="https://www.ourplanet.com/en/" target="_blank" rel="noopener">Our Planet 官網</a><br>
+      🌏<a href="https://www.ourplanet.com/en/explorable-globe/landing" target="_blank" rel="noopener">互動地球儀</a>
+    </ul>
+  </div>
+</article>
+
+<!-- How It's Made｜科學頻道製作過程節目 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="科普,紀錄片,真人,工程">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL39_ud5aKSvnYDhKdB7wTDUZRiE8RaJat"
+      title="How It's Made Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="科普">科普</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="紀錄片">紀錄片</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="真人">真人</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="工程">工程</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">How It's Made｜怎麼做的？</h3>
+    <p class="mt-3 text-gray-700">
+      <em>Science Channel</em> 的經典系列，帶你看東西是怎麼做出來的，從洋芋片、爆米花，到卡車、鐵路橋，應有盡有。影片長短不一，建議依孩子專注力挑選適合的集數。
+    </p>
+
+  </div>
+</article>
+
+
+
+
+      </div>
+    </section>
+
+<!-- ======================= 社會時事型內容分頁 ======================= -->
+    <section id="society" class="tab-content active">
+      <!-- 標籤篩選列（依需要自行增減 tag） -->
+      <div class="mb-6 flex flex-wrap items-center gap-2">
+        <span class="text-sm text-gray-600">快速篩選：</span>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="社會科學">社會科學</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="時事">時事</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="英式發音">英式發音</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="美式發音">美式發音</button>
+  
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="卡通">卡通</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="真人">真人</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="紀錄片">紀錄片</button>
+        <button class="clear-tags rounded-full px-3 py-1 text-xs bg-white border text-gray-600">清除</button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- Destination: World｜國家地理兒童節目 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="紀錄片,美式發音,社會科學">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLD_3F4w1Rp_sWln_87i7t06cgKJ0hliN1"
+      title="Destination: World - National Geographic Kids" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="社會科學">社會科學</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="紀錄片">紀錄片</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Destination: World｜20 分鐘環遊世界</h3>
+    <p class="mt-3 text-gray-700">
+      國家地理頻道兒童節目 <em>Destination: World</em> 系列，<strong>每大洲約 3 分鐘影片</strong>，快速環遊世界、認識地球七大洲。<br>
+      影片長度短小精悍，適合課堂或家庭輕鬆播放，全部看完就是一趟完整的20 分鐘環遊世界之旅。
+    </p>
+  </div>
+</article>
+
+
+
+<!-- Videos for Young Learners｜博物館歷史主題短片 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="社會科學,真人,英式發音">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL0LQM0SAx6038_HvJTTDvl7_e3t2Jhwt3"
+      title="Videos for Young Learners - Museum Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英式發音">英式發音</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="真人">真人</button>
+  <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="社會科學">社會科學</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Videos for Young Learners｜大英博物館短片</h3>
+    <p class="mt-3 text-gray-700">
+      大英博物館所製作一系列給孩子看的短片，涵蓋英國課綱中的<strong>歷史時期</strong>與<strong>大英博物館館藏</strong>。
+    </p>
+    
+  </div>
+</article>
+
+
+
+
+
+
+
+<!-- Let's Go On A Field Trip!｜Super Simple Play -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="實地探訪,美式發音,真人">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL86-PnO8H7d9uLtT5LReCQ3LsocXBAY77"
+      title="Let's Go On A Field Trip! - Super Simple Play" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="實地探訪">實地探訪</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="真人">真人</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Let's Go On A Field Trip!｜戶外教學</h3>
+    <p class="mt-3 text-gray-700">
+      Super Simple Play 頻道裡的 Caitie 老師帶孩子進行各種 <strong>field trips</strong>：
+      從消防隊、現代舞教室、餅乾店廚房到海灘、露營，<strong>題材多元、節奏輕快</strong>。
+      每集長度大約 6–7 分鐘，適合幼兒在短時間內吸收並保持專注。
+    </p>
+  </div>
+</article>
+
+
+
+<!-- KidVision Field Trips｜虛擬實地探訪清單 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="field trip,實地探訪,美式發音,真人">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLD_3F4w1Rp_sctNSbQbBDllWuHd0t1h24"
+      title="KidVision Field Trips Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="實地探訪">實地探訪</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="真人">真人</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">KidVision Field Trips｜戶外教學</h3>
+    <p class="mt-3 text-gray-700">
+      美國南南佛羅里達公共電視台 KidVision 節目，有 Field Trips 戶外教學和職人訪談，由 Penny 老師實際帶著幾個幼兒園孩子走進博物館、工廠、農場、消防站等現場，體驗不同場域與操作過程，可以學習主題相關的單詞，並聽聽實際互動的對話。
+    </p>
+  </div>
+</article>
+<!-- I Can Cook｜英國兒童烹飪節目（縮圖版） -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="烹飪,英式發音,真人">
+  <a href="https://www.youtube.com/playlist?list=PLCylhFsgJy5TQhq4j2fqKwcrPZqTBLoZr" target="_blank" rel="noopener">
+    <img src="https://img.youtube.com/vi/_JMzXRQbOR4/maxresdefault.jpg" 
+         alt="I Can Cook Season 3 Playlist" class="w-full object-cover">
+  </a>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英式發音">英式發音</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="烹飪">烹飪</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="真人">真人</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">
+      <a href="https://www.youtube.com/playlist?list=PLCylhFsgJy5TQhq4j2fqKwcrPZqTBLoZr" target="_blank" rel="noopener">I Can Cook ｜兒童烹飪節目</a>
+    </h3>
+    <p class="mt-3 text-gray-700">
+      英國兒童烹飪節目 <em>I Can Cook</em>，每集約 15 分鐘，YouTube 上共有四季。主持人 Katy 帶領小朋友一起做料理，每集都有洗手歌、收拾歌，到產地或工廠找食材，還設計猜神秘食材的遊戲。<br>
+      烹飪中用全身動作模擬麵包發酵、漿果爆漿、果汁擠壓，邀觀眾一起互動。
+    </p>
+  </div>
+</article>
+
+<!-- CNN 10｜10 分鐘兒少新聞（美） -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="時事,美式發音,">
+  <div class="aspect-video-container">
+    <!-- 用關鍵字清單嵌入，保證可播 -->
+    <iframe src="https://www.youtube.com/embed/videoseries?si=lG_zyANKmuwIH5L0&amp;list=PLolrn7cpMe9jnBJZCFXyadlzODRfQFCIm"
+      title="CNN 10 - Daily News" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="時事">時事</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">CNN 10｜10 分鐘兒少新聞</h3>
+    <p class="mt-3 text-gray-700">
+      美國 CNN 新聞台製作，每集約 10 分鐘的精簡新聞，題材即時、語速中等，美國高年級以上程度。
+    </p>
+  </div>
+</article>
+
+<!-- NBC Nightly News: Kids Edition｜每週一次（美） -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="時事,美式發音,">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL0tDb4jw6kPwCDw0Ql9vTSD3Pc4Vd2EOn"
+      title="NBC Nightly News: Kids Edition Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="時事">時事</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">NBC Nightly News: Kids Edition｜每週兒少新聞</h3>
+    <p class="mt-3 text-gray-700">
+      美國 NBC 新聞每週四更新一集兒少版新聞，主題生活化，易於理解與延伸討論。
+    </p>
+  </div>
+</article>
+
+<!-- BBC Newsround｜英國兒少新聞（英） -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="時事,英式發音">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?si=By1qRQK3FllezfvN&amp;list=PL-2SkY8uS2lI3krdNe0BZdlz89fTospAS"
+      title="BBC Newsround" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="時事">時事</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英式發音">英式發音</button>
+
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">BBC Newsround｜英國兒少新聞</h3>
+    <p class="mt-3 text-gray-700">
+      BBC 專為兒童設計的新聞節目，語速友善、議題多樣。
+    </p>
+  </div>
+</article>
+
+<!-- CBC Kids News Explainers｜新聞小百科 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="時事,美式發音">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?si=GPLc3ooENc0N3IZQ&amp;list=PLRgAmbm3to0ahNnueYtEYqDGe2GyJ9ji7" 
+      title="CBC Kids News" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="時事">時事</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">CBC Kids News Explainers｜新聞小百科</h3>
+    <p class="mt-3 text-gray-700">
+      加拿大 CBS 電視台兒少新聞的 Explainers 單元，簡要介紹 AI、經濟蕭條、避難包等各種主題。
+    </p>
+  </div>
+</article>
+
+
+
+
+<!-- 奧運片單（你的自選清單） -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="時事">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLD_3F4w1Rp_v0UUOvWM3O3R5tDgwv7qX_"
+      title="奧運片單 - Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="時事">時事</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">奧運片單｜運動與英語主題延伸</h3>
+    <p class="mt-3 text-gray-700">
+      以奧運為主題的延伸清單，結合運動項目、科普與英文詞彙，適合賽事期間暖身觀看。
+    </p>
+  </div>
+</article>
+
+<!-- My Works Montessori｜蒙特梭利學習影片 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="社會科學,美式發音,真人">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL7n8-uJamB0ebYwUqLiH9LkAw5xPEgMtP"
+      title="My Works Montessori Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="社會科學">社會科學</button>
+
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="真人">真人</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">My Works Montessori｜蒙特梭利學習影片</h3>
+    <p class="mt-3 text-gray-700">
+      雙語陪玩參考。影片依照蒙式的各領域區分：生活技能、科學文化、數學、語文等，也有<strong>環境準備的基本介紹</strong>，適合家長和老師參考。
+    </p>
+    <p class="mt-4">
+     ▶️ <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline" 
+            href="https://www.youtube.com/user/myworksmontessori" target="_blank" rel="noopener">YouTube 頻道</a>
+    </p>
+  </div>
+</article>
+
+      </div>
+    </section>
+
+    <!-- ======================= 語言分頁 ======================= -->
+    <section id="music" class="tab-content">
+      <div class="mb-6 flex flex-wrap items-center gap-2">
+        <span class="text-sm text-gray-600">快速篩選：</span>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="繪本朗讀">繪本朗讀</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="生活會話">生活會話</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="英語教學">英語教學</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="詩歌">詩歌</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="兒歌">兒歌</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="卡通">卡通</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="英式發音">英式發音</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="美式發音">美式發音</button>
+        <button class="clear-tags rounded-full px-3 py-1 text-xs bg-white border text-gray-600">清除</button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- 鵝媽媽入門選輯｜Wee Sing Mother Goose（唸誦＋演唱，節奏入門） -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="兒歌,詩歌,美式發音">
+  <div class="aspect-video-container">
+    <!-- 主要清單：Mother Goose 1 -->
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLD_3F4w1Rp_sakWqgejUCinvGa8IGyCIb"
+      title="Wee Sing Mother Goose 1 Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="詩歌">詩歌</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="兒歌">兒歌</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Mother Goose｜鵝媽媽童謠</h3>
+    <p class="mt-3 text-gray-700">
+      從童謠唸誦學英語的輕重音節奏，文法與句型會跟著「聲音」記起來，不必死背規則。Wee Sing Mother Goose
+      每首都是<strong>先唸一遍再唱一遍</strong>，我挑選較簡單的 14 首作為第一輯，裡面有 5 首是我 30 年前在兒童美語班學的，到現在還能背——真人實證，親測有效，試試吧！
+    </p>
+
+    <!-- 播放清單／延伸清單（用你指定的樣式） -->
+    <p class="mt-4">
+      <span class="text-lg font-bold text-indigo-600">▶️ 播放清單：</span>
+  
+      <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline"
+         href="https://www.youtube.com/playlist?list=PLD_3F4w1Rp_tHJezPt8lxObyK-82GUqtM" target="_blank" rel="noopener">Mother Goose - 2</a>
+    </p>
+
+    <!-- Wee Sing 專輯（完整版與故事版） -->
+    <p class="mt-2">
+      <span class="text-lg font-bold text-indigo-600">🌐 Wee Sing 專輯：</span>
+      <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline"
+         href="https://www.youtube.com/playlist?list=OLAK5uy_kVCtkIJ7KZyv87zEEjYNFWbTptE1mrwsM" target="_blank" rel="noopener">Mother Goose（全 71 首）</a>
+      ／
+      <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline"
+         href="https://www.youtube.com/playlist?list=OLAK5uy_lt3jNr0O9Y1XGtILJePhIsvC4E_G6Uah0" target="_blank" rel="noopener">Nursery Rhymes & Lullabies（故事版）</a>
+    </p>
+  </div>
+</article>
+
+
+
+
+<!-- Alphablocks｜看卡通學 Phonics -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="英語教學,卡通,英式發音">
+    <a href="https://www.youtube.com/playlist?list=PLSW2D61TnopTtlSRTeJhrogobQMHcFPZa" target="_blank" rel="noopener">
+    <img src="https://img.youtube.com/vi/B8Wf1EadpqE/maxresdefault.jpg"
+         alt="Alphablocks Episode Thumbnail" class="w-full object-cover">
+  </a>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英語教學">英語教學</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英式發音">英式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Alphablocks｜看卡通學 Phonics</h3>
+    <p class="mt-3 text-gray-700">
+      BBC 卡通，每個字母都是擬人化的積木，遇到會組合成單詞。依難度分 5 級，與英國 <em>synthetic phonics</em> 教學法相符。
+      影片有趣又幽默，適合孩子循序漸進練習字母音與拼讀。<br><br>
+<p class="mt-3">
+      📖 <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline" href="https://www.facebook.com/share/p/1BKJouneTa/" target="_blank" class="text-indigo-600 hover:underline">各級別進度（Facebook 貼文）</a>
+
+<span class="text-lg font-bold text-indigo-600">▶️ 播放清單：</span>
+  <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline" 
+     href="https://www.youtube.com/playlist?list=PLSW2D61TnopTtlSRTeJhrogobQMHcFPZa" target="_blank" rel="noopener">1</a>、
+  <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline" 
+     href="https://www.youtube.com/playlist?list=PLSW2D61TnopQoYAAZ073Td8fwg4lOP48K" target="_blank" rel="noopener">2</a>、
+  <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline" 
+     href="https://www.youtube.com/playlist?list=PLSW2D61TnopRF7ZTjiD4o3so50dyWXwFn" target="_blank" rel="noopener">3</a>、
+  <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline" 
+     href="https://www.youtube.com/playlist?list=PLSW2D61TnopS0KRubz8xd6gfbSWxA1SU-" target="_blank" rel="noopener">4</a>、
+  <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline" 
+     href="https://www.youtube.com/playlist?list=PL_9-AfR6dlC9X8fr4u0MuoQ7nM7EtOvMn" target="_blank" rel="noopener">5</a>
+</p>
+
+      🌐 <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline" 
+     href="https://www.learningblocks.tv/alphablocks/home" target="_blank" rel="noopener">Alphablocks 官網</a>
+    </p>
+  </div>
+</article>
+
+<!-- ABCmouse｜A–Z 字母歌（每個字母一首，編曲多變） -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="英語教學,兒歌,卡通">
+  <div class="aspect-video-container">
+    <!-- 先嵌入 A–M 清單；若想換成 N–Z，只要替換 list=... -->
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLlG8Y2sj2t1FJRB8BoCEITAEdA0blA6gL"
+      title="ABCmouse Alphabet Songs A–M" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英語教學">英語教學</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="兒歌">兒歌</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">ABCmouse｜A–Z 字母歌</h3>
+    <p class="mt-3 text-gray-700">
+      ABCmouse.com 製作，<strong>為每個字母量身創作一首歌</strong>，編曲風格多變（不是同一個調子唱 26 遍 😄）。
+      每首塞進<strong>大量該字母開頭單字</strong>，有些串成小故事、有些用圖片唱出來，<strong>單字拼寫會顯示且首字母套色</strong>，對字母音印象很深。
+      歌裡常出現人名；我們家的 Noah 和 Ray 都有被點名，孩子看到自己的名字會特別驚喜，也順便多看幾次大寫字母。
+    </p>
+
+    <!-- 兩個清單用你的粗體藍字樣式 -->
+    <p class="mt-4">
+      <span class="text-lg font-bold text-indigo-600">▶️ 播放清單：</span>
+      <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline"
+         href="https://youtube.com/playlist?list=PLlG8Y2sj2t1FJRB8BoCEITAEdA0blA6gL" target="_blank" rel="noopener">A–M</a>
+      ／
+      <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline"
+         href="https://youtube.com/playlist?list=PLlG8Y2sj2t1FUbf8GD6r0XT7iITaKVUrV" target="_blank" rel="noopener">N–Z</a>
+    </p>
+  </div>
+</article>
+
+<!-- Super Why!｜Phonics 歷險卡通 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="英語教學,生活會話,美式發音,卡通">
+  <div class="aspect-video-container">
+    <!-- 主要嵌入：第 1 季播放清單 -->
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLD_3F4w1Rp_vrqNBRKGkrjM4RoaLnmep4"
+      title="Super Why! Season 1 Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英語教學">英語教學</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="生活會話">生活會話</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Super Why!｜Phonics 歷險卡通 </h3>
+    <p class="mt-3 text-gray-700">
+PBS Kids 的教育卡通，故事書村的
+ <strong>Super Readers</strong>每當遇到「超級大問題」就跳進經典故事書裡找答案，過程中會和螢幕前的孩子互動。
+<br>
+      成員各司其職：小豬練<strong>字母</strong>、小紅帽學<strong>押韻</strong>、豌豆公主做<strong>發音與拼字</strong>、Whyatt 用<strong>換字改情節</strong>帶孩子理解語境。
+    </p>
+
+    <!-- 播放清單 -->
+    <p class="mt-4">
+      <span class="text-lg font-bold text-indigo-600">▶️ 播放清單：</span>
+
+      <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline"
+         href="https://youtube.com/playlist?list=PLD_3F4w1Rp_ufgLTN75c2pVuQKud6o0EN" target="_blank" rel="noopener">第二季</a>、
+      <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline"
+         href="https://youtube.com/playlist?list=PLD_3F4w1Rp_sSHfg22Kz_6LCsZW1aD1h2" target="_blank" rel="noopener">第三季</a>
+    </p>
+
+    <!-- 延伸學習資源 -->
+    <p class="mt-2">
+      <span class="text-lg font-bold text-indigo-600">🌐 </span>
+      <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline"
+         href="https://www.pbslearningmedia.org/resource/super_why_301/super-why-the-story-of-the-super-readers/" target="_blank" rel="noopener">PBS LearningMedia 教案</a>
+    </p>
+  </div>
+</article>
+
+
+<!-- 星期名稱主題播放清單｜兒歌＋有聲書主題編排 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="英語教學,兒歌,繪本朗讀">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLD_3F4w1Rp_v4XBW79al8a14e1VVD86A5"
+      title="Days of the Week Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英語教學">英語教學</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="兒歌">兒歌</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="繪本朗讀">繪本朗讀</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">星期名稱主題｜有聲書＋兒歌</h3>
+    <p class="mt-3 text-gray-700">
+      我給小孩聽有聲書，會把<strong>相同主題、難度相近</strong>的編排在一個播放清單裡，<strong>搭配兒歌一起聽</strong>。這裡是「星期名稱」主題的清單，適合邊玩邊聽、邊唸邊唱。
+    </p>
+ 
+  </div>
+</article>
+
+
+
+ <!-- Storyline Online｜名人朗讀繪本（官方清單嵌入） -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="繪本朗讀, 美式發音">
+  <div class="aspect-video-container">
+    <!-- 官方 YouTube 播放清單（可直接播放） -->
+    <iframe src="https://www.youtube.com/embed/videoseries?si=BDq4Epso38ecDfm7&amp;list=PLVkRno2M8Jkpso5VkXR32GK8nIBBEygCa"
+      title="Storyline Online - Official Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <!-- 可點擊的標籤（需與 data-tags 對應） -->
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="繪本朗讀">繪本朗讀</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+    </div>
+
+    <h3 class="text-lg font-bold text-gray-900">Storyline Online｜名人朗讀繪本</h3>
+    <p class="mt-3 text-gray-700">
+      由美國演員公會基金會製作，<strong>名人朗讀 + 部分動畫化</strong>。梅莉史翠普、歐普拉、前副總統高爾都在這裡獻聲，
+      書單包含 <em>Goodnight Moon</em>、<em>Strega Nona</em>、<em>The Giving Tree</em>，也有陳致元的 <em>Guji Guji</em>。<br>
+      官網每部都有 <strong>Teacher’s Guide</strong> 教案可下載。
+    </p>
+
+    <!-- 相關連結（在卡片內提供深度延伸） -->
+    <div class="mt-4 flex flex-wrap text-lg">
+     🌐 <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline" href="https://storylineonline.net/" target="_blank" rel="noopener">Storyline Online 官網</a>
+
+    </div>
+  </div>
+</article>
+<!-- Brightly Storytime｜專業繪本朗讀 + Podcast -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="繪本朗讀,美式發音">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?si=HNL_oHS2RH8i0KJR&amp;list=PLDcpsppkgAloXxGU9Y09vmHLZevSoM4TO"
+      title="Brightly Storytime Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="繪本朗讀">繪本朗讀</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Brightly Storytime｜繪本朗讀</h3>
+    <p class="mt-3 text-gray-700">
+      Brightly Storytime 是 Penguin Random House 的合作夥伴，主打英文與一些西文繪本朗讀。多數故事由 Ms. Linda 朗讀，也會邀作者朗讀自己作品。  
+      有些是 flip-along（翻頁跟讀）、很多是 read-along（文字變色同步讀），朗讀後 Ms. Linda 還會提出簡單問題，邀孩子一起思考回想。
+    </p>
+    <div class="mt-4 text-lg">
+      
+      🎶 <a class="text-indigo-600 text-lg font-bold hover:text-indigo-800 underline" href="https://music.youtube.com/playlist?list=PLDcpsppkgAlpCwUTFkAH30JmucqFz2p5d" target="_blank" rel="noopener">YouTube Music 播放清單</a>
+    </div>
+  </div>
+</article>
+
+<!-- HarperKids Storytime Read Aloud｜HarperCollins -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="繪本朗讀,美式發音">
+<a href="https://www.youtube.com/playlist?list=PLiYzMwyBPG96EDjV7MAohaCnXoQnqiBmG" target="_blank" rel="noopener">
+    <img src="https://img.youtube.com/vi/cW8tFC6_n-c/maxresdefault.jpg" alt="HarperKids Storytime Read Aloud Playlist Thumbnail" class="w-full object-cover">
+  </a>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="繪本朗讀">繪本朗讀</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">HarperKids Storytime Read Aloud｜繪本朗讀</h3>
+    <p class="mt-3 text-gray-700">
+      HarperCollins 童書部門的 <em>HarperKids Storytime Read Aloud</em> 播放清單，目前共有 <strong>128 部影片</strong>，
+      其中許多繪本是由作者親自朗讀。<br>
+      內容多樣，結合 <strong>專業的演繹與經典童書</strong>，適合孩子在家親子共讀或課堂延伸使用。
+    </p>
+  </div>
+</article>
+
+<!-- 1) Pure Star Kids｜童詩動畫合輯 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="詩歌,卡通, 英式發音">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLEGqOXAa6cvW70uKUOKHE4oIhKY27EhA-"
+      title="Pure Star Kids - Poems Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="詩歌">詩歌</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英式發音">英式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Pure Star Kids｜童詩動畫合輯</h3>
+    <p class="mt-3 text-gray-700">
+      以動畫呈現、難度適中，林寶背了其中好幾首！適合詩歌初學者跟著節奏朗誦。
+    </p>
+  </div>
+</article>
+
+<!-- 2) Disney Junior：A Poem Is...｜名人朗讀 21 首 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="美式發音,詩歌">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL1B64A5F9FDAA55C6"
+      title="Disney Junior - A Poem Is... Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="詩歌">詩歌</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">A Poem Is...｜名人朗讀 21 首小詩</h3>
+    <p class="mt-3 text-gray-700">
+      Disney Junior 節目，由名人朗讀；每集前半孩子們說說「A poem is...」，用生活語彙認識詩。
+    </p>
+  </div>
+</article>
+
+<!-- 3) The Shel Game｜Shel Silverstein 詩作趣味演繹 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="真人,美式發音,詩歌">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL1jOeAbXF7mV9Ftl8nxSKXlNKE9aySVCS"
+      title="The Shel Game - Silverstein Poems Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="真人">真人</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="詩歌">詩歌</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">The Shel Game｜搞笑讀詩</h3>
+    <p class="mt-3 text-gray-700">
+      一位美國創作者在疫情期間錄製朗讀 Shel Silverstein 詩作，搭配道具和故作正經的表演；兩寶看到停不下來！
+    </p>
+  </div>
+</article>
+
+
+<!-- Storytime with The Met｜大都會博物館說故事清單 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="繪本朗讀, 美式發音">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL8HAkqKX065C1UcvHQiUbEXMRb2v8qBJ2"
+      title="Storytime with The Met Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="繪本朗讀">繪本朗讀</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Storytime with The Met｜大都會博物館說故事</h3>
+    <p class="mt-3 text-gray-700">
+      由紐約大都會博物館推出的說故事系列影片。美術館藝術與繪本結合，適合孩子透過故事貼近藝術與文化。
+    </p>
+  </div>
+</article>
+
+<!-- English Singsing｜主題情境英語教學 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="英語教學,卡通,兒歌,生活會話,美式發音">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLii5rkhsE0LecNHNQfsrFcxoG0ki_KVo_"
+      title="English Singsing - Thematic English Learning Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英語教學">英語教學</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="生活會話">生活會話</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">English Singsing｜主題情境英語</h3>
+    <p class="mt-3 text-gray-700">
+      <strong>每集介紹一個情境和句型</strong>，包含對話、歌曲、rap 唸誦，甚至把主題句放進童話故事片段裡。<br>
+      適合小學生使用，國中課程會再重教一次，也可當複習。<strong>同一主題句在同集裡重複很多次</strong>，有助於記憶，但偶爾看一集即可，劇情類卡通或真人節目仍更有趣。
+    </p>
+  </div>
+</article>
+
+
+      </div>
+    </section>
+
+    <!-- ======================= 幼幼（2–5）分頁 ======================= -->
+    <section id="toddlers" class="tab-content">
+      <div class="mb-6 flex flex-wrap items-center gap-2">
+        <span class="text-sm text-gray-600">快速篩選：</span>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="兒歌">兒歌</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="英語教學">英語教學</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="英式發音">英式發音</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="美式發音">美式發音</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="生活會話">生活會話</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="卡通">卡通</button>
+        <button class="tag-btn rounded-full px-3 py-1 text-xs bg-gray-100 text-gray-700" data-tag="真人">真人</button>
+        <button class="clear-tags rounded-full px-3 py-1 text-xs bg-white border text-gray-600">清除</button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- 1) Super Simple Songs：Noodle and Pals（你的原文語氣） -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                 data-tags="兒歌,美式發音,英語教學,卡通">
+          <div class="aspect-video-container">
+            <!-- 這是你提供的清單；如需替換只改 list=... -->
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLdkj6XH8GYPSlWRvfDZOgcoZ-j8cXU04G"
+              title="Noodle and Pals - Super Simple Songs" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <div class="p-6 flex-grow">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英語教學">英語教學</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="兒歌">兒歌</button>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900">Noodle and Pals｜最入門兒歌</h3>
+            <p class="mt-3 text-gray-700">
+              Super Simple Songs 裡的 Noodle and Pals 是最入門的，<strong>簡單重覆還帶動作</strong>，親子一起唱唱跳跳最剛好。
+            </p>
+          </div>
+        </article>
+
+        <!-- 2) Yakka Dee!（每集一個單字；小小孩先不要看字母/Phonics） -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                 data-tags="單字情境,真人互動,英式發音">
+          <div class="aspect-video-container">
+            <!-- 可換成你想要的系列清單 ID -->
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PL381wCcukgFEee5NIBh92LyPnwsjiU1s9"
+              title="Yakka Dee! Series 1" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <div class="p-6 flex-grow">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英語教學">英語教學</button>
+
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英式發音">英式發音</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="真人">真人</button>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900">Yakka Dee!｜每集介紹一個單字</h3>
+            <p class="mt-3 text-gray-700">
+              英國節目，<strong>每集介紹一個單字</strong>，有真人小朋友一起說，還有各種有趣搭配。找各季的 Series 清單，<strong>小小孩先不要看字母和 Phonics 系列</strong>。
+            </p>
+          </div>
+        </article>
+
+        <!-- 3) Learning Time with Timmy（英國文化協會 × 笑笑羊；每集約 3 個單字；5 分鐘） -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                 data-tags="生活會話,英語教學,卡通,英式發音">
+          <div class="aspect-video-container">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PL75WpgEj_KA1i0WUvRc1Zn7WIm5YmeOIB"
+              title="Learning Time with Timmy - British Council & Aardman" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <div class="p-6 flex-grow">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英語教學">英語教學</button>
+            <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="生活會話">生活會話</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英式發音">英式發音</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900">Learning Time with Timmy｜幼兒園情境 × 黏土動畫</h3>
+            <p class="mt-3 text-gray-700">
+              英國文化協會的教學節目，由《笑笑羊》團隊製作的黏土動畫，<strong>每集重點介紹約 3 個單字，正式集數每集 5 分鐘</strong>，場景是幼兒園。
+            </p>
+          </div>
+        </article>
+
+        <!-- 4) Maisy Mouse（語速慢、第三人稱旁白、生活化；每部20分鐘、內含4集） -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                 data-tags="卡通,生活會話,英式發音">
+          <div class="aspect-video-container">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PL2syiPwjmIEVIQRsW6KyPnAyc2ryq72CT"
+              title="Maisy Mouse - English Full Episodes Playlist" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <div class="p-6 flex-grow">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="生活會話">生活會話</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="英式發音">英式發音</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900">Maisy Mouse｜小鼠波波</h3>
+            <p class="mt-3 text-gray-700">
+              <strong>語速慢，第三人稱旁白，生活化場景</strong>。每部影片約 20 分鐘，裡面有 4 集短篇，當作安靜時光的英語輸入很剛好。
+            </p>
+          </div>
+        </article>
+
+<!-- Circle Time with Ms. Monica｜美國幼教老師的遠距團討 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="美式發音,兒歌,真人,生活會話">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLvK4y1kMAQ79N4qv-i7dVFGv7FdD-u3e8"
+      title="Circle Time with Ms. Monica Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+              <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="生活會話">生活會話</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="兒歌">兒歌</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="真人">真人</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Circle Time with Ms. Monica｜美國幼教老師的遠距團討</h3>
+    <p class="mt-3 text-gray-700">
+      Ms. Monica 擁有 <strong>18 年幼教經驗</strong>，2020 年因疫情停課在家，她開始在 YouTube 上每日上傳 <strong>約 20 分鐘的 Circle Time</strong> 影片，
+      流程包含：Good Morning Train 問候歌、星期歌、數字/字母/形狀、天氣互動、幫熊熊換衣服、兒歌結束。 
+    </p>
+  </div>
+</article>
+
+<!-- Mr. Monkey, Monkey Mechanic｜交通工具卡通 -->
+<article class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+         data-tags="卡通,生活會話,美式發音">
+  <div class="aspect-video-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLbUYUvMKj5xe7OEpWnkJqTDQO9glTjov4"
+      title="Mr. Monkey, Monkey Mechanic Playlist" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="p-6 flex-grow">
+    <div class="flex flex-wrap gap-2 mb-3">
+      <button class="tag-chip inline-flex items-center rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="卡通">卡通</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="生活會話">生活會話</button>
+      <button class="tag-chip inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-indigo-700" data-tag="美式發音">美式發音</button>
+    </div>
+    <h3 class="text-lg font-bold text-gray-900">Mr. Monkey, Monkey Mechanic｜交通工具卡通</h3>
+    <p class="mt-3 text-gray-700">
+      Super Simple 出品的趣味動畫，猴子技師替動物客戶修理車輛：長頸鹿的車開天窗、豪豬換木輪、變色龍不停重漆…每集約 5 分鐘，情境圍繞「問題－檢查－構思－修理－解釋」完整流程，幫助孩子建立條理化思考。<br>
+      角色口音多樣，能引發孩子模仿的興趣。
+    </p>
+
+  </div>
+</article>
+
+
+      </div>
+    </section>
+  </main>
+
+<!-- 支持作者區塊（放在 footer 之前） -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
+  <div class="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="text-center sm:text-left">
+      <h2 class="text-lg font-bold text-gray-900">喜歡這些精選片單嗎？</h2>
+      <p class="text-sm text-gray-600 mt-1">支持我繼續整理與分享，讓更多家庭找到優質內容。</p>
+    </div>
+    <a href="https://portaly.cc/mamahowma/support" target="_blank" rel="noopener noreferrer"
+       class="inline-block bg-gradient-to-r from-amber-400 to-orange-500 text-white font-semibold py-2 px-5 rounded-full shadow-md hover:scale-105 transition-transform">
+      支持我繼續創作分享，請我喝杯咖啡吧 ☕
+    </a>
+  </div>
+</section>
+
+  <!-- 頁尾 -->
+<footer class="bg-white mt-12 border-t">
+  <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Icons 列 -->
+    <div class="mb-3 flex items-center justify-center gap-4 text-gray-700">
+      <a href="mailto:mamahowma@gmail.com" aria-label="Email" class="hover:text-indigo-600">
+        <i class="fa-solid fa-envelope fa-xl fa-fw"></i>
+      </a>
+      <a href="https://www.facebook.com/mamahowma" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-indigo-600">
+        <i class="fa-brands fa-facebook fa-xl fa-fw"></i>
+      </a>
+      <a href="https://portaly.cc/mamahowma/support" target="_blank" rel="noopener" aria-label="Support on Portaly" class="hover:text-indigo-600">
+        <i class="fa-solid fa-mug-hot fa-xl fa-fw"></i>
+      </a>
+    </div>
+
+    <!-- 版權文字 -->
+    <p class="text-gray-500 text-sm">© 2025 Christina Yu. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.tab-content');
+
+    function activateTab(id){
+      tabs.forEach(t=>{
+        const on = t.dataset.tab === id;
+        t.classList.toggle('text-indigo-600', on);
+        t.classList.toggle('border-indigo-500', on);
+        t.classList.toggle('text-gray-500', !on);
+      });
+      sections.forEach(s=>s.classList.toggle('active', s.id === id));
+      history.replaceState(null, '', '#' + id);
+    }
+
+    tabs.forEach(t=>{
+      t.addEventListener('click', ()=> activateTab(t.dataset.tab));
+    });
+
+    // 支援網址直達 #tab
+    const initial = location.hash.replace('#','') || 'knowledge';
+    if (document.getElementById(initial)) activateTab(initial);
+
+    // —— 標籤篩選（在各分頁內生效）——
+    const allSections = Array.from(sections);
+    allSections.forEach(section=>{
+      const grid = section.querySelector('.grid');
+      if (!grid) return;
+
+      const tagButtons = section.querySelectorAll('.tag-btn, .tag-chip');
+      const clearBtn = section.querySelector('.clear-tags');
+
+      let activeTag = null;
+
+      function applyFilter(){
+        const cards = grid.querySelectorAll('article');
+        cards.forEach(card=>{
+          const tags = (card.getAttribute('data-tags') || '').split(',').map(s=>s.trim());
+          const show = !activeTag || tags.includes(activeTag);
+          card.style.display = show ? '' : 'none';
+        });
+        // 標記按鈕狀態
+        section.querySelectorAll('.tag-btn, .tag-chip').forEach(b=>{
+          const pressed = b.getAttribute('data-tag') === activeTag;
+          b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+        });
+      }
+
+      tagButtons.forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const t = btn.getAttribute('data-tag');
+          activeTag = (activeTag === t) ? null : t; // 再次點擊取消
+          applyFilter();
+        });
+      });
+
+      if (clearBtn) {
+        clearBtn.addEventListener('click', ()=>{
+          activeTag = null;
+          applyFilter();
+        });
+      }
+    });
+  });
+  </script>
+</body>
+</html>
+
