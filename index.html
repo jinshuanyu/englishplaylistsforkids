@@ -1349,39 +1349,101 @@ PBS Kids 的教育卡通，故事書村的
 
 
   <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const tabs = document.querySelectorAll('.tab-btn');
-  const sections = document.querySelectorAll('.tab-content');
+  // ===== 分頁切換 =====
+  const tabButtons = Array.from(document.querySelectorAll('.tab-btn'));
+  const sections = Array.from(document.querySelectorAll('.tab-content'));
 
-  function activateTab(id){
-    tabs.forEach(t=>{
-      const isActive = (t.dataset.tab === id);
-      // 清理兩種狀態會互斥的 class
-      t.classList.remove('text-indigo-600','border-indigo-500');
-      t.classList.remove('text-gray-500','hover:text-gray-700','hover:border-gray-300','border-transparent');
-
-      if (isActive) {
-        // 作用中：靛藍字＋靛藍底線（不需要灰色 hover 樣式）
-        t.classList.add('text-indigo-600','border-indigo-500');
-        t.setAttribute('aria-selected','true');
+  function setActiveTab(tabId) {
+    // 更新分頁內容
+    sections.forEach(sec => {
+      if (sec.id === tabId) {
+        sec.classList.add('active');
       } else {
-        // 非作用中：灰字＋灰色 hover 邊框＋透明底線
-        t.classList.add('text-gray-500','hover:text-gray-700','hover:border-gray-300','border-transparent');
-        t.setAttribute('aria-selected','false');
+        sec.classList.remove('active');
       }
     });
 
-    sections.forEach(s=>s.classList.toggle('active', s.id === id));
-    history.replaceState(null, '', '#' + id);
+    // 更新導覽按鈕樣式 & aria
+    tabButtons.forEach(btn => {
+      const isActive = btn.dataset.tab === tabId;
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      btn.classList.toggle('text-indigo-600', isActive);
+      btn.classList.toggle('border-indigo-500', isActive);
+      btn.classList.toggle('text-gray-500', !isActive);
+      btn.classList.toggle('border-transparent', !isActive);
+    });
+
+    // 切到新分頁時，清乾淨該分頁以外的已選標籤，並重置目前分頁篩選
+    sections.forEach(sec => resetTagUI(sec, sec.id !== tabId));
+    applyFilter(document.getElementById(tabId));
   }
 
-  tabs.forEach(t=> t.addEventListener('click', ()=> activateTab(t.dataset.tab)));
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => setActiveTab(btn.dataset.tab));
+  });
 
-  // 支援 #hash 直達 + 頁面初始狀態
-  const initial = location.hash.replace('#','') || 'science';
-  if (document.getElementById(initial)) activateTab(initial);
-});
+  // ===== 標籤篩選（依分頁各自獨立）=====
+  function getSelectedTags(sectionEl) {
+    return Array.from(sectionEl.querySelectorAll('.tag-btn[aria-pressed="true"]'))
+      .map(b => b.dataset.tag);
+  }
+
+  function applyFilter(sectionEl) {
+    if (!sectionEl) return;
+    const selected = getSelectedTags(sectionEl);
+    const cards = Array.from(sectionEl.querySelectorAll('article[data-tags]'));
+
+    cards.forEach(card => {
+      const tags = (card.getAttribute('data-tags') || '').split(',').map(s => s.trim());
+      const show = selected.length === 0 || selected.some(t => tags.includes(t));
+      card.style.display = show ? '' : 'none';
+    });
+  }
+
+  function resetTagUI(sectionEl, clear = true) {
+    // clear=true：把該分頁所有快速篩選都歸零
+    if (clear) {
+      sectionEl.querySelectorAll('.tag-btn[aria-pressed="true"]').forEach(b => {
+        b.setAttribute('aria-pressed', 'false');
+        b.classList.remove('ring-2','ring-indigo-500');
+      });
+    }
+  }
+
+  function setupTagFilteringFor(sectionEl) {
+    // 監聽「快速篩選」按鈕（.tag-btn）
+    sectionEl.querySelectorAll('.tag-btn[data-tag]').forEach(btn => {
+      // 初始 aria 狀態
+      if (!btn.hasAttribute('aria-pressed')) btn.setAttribute('aria-pressed', 'false');
+
+      btn.addEventListener('click', () => {
+        const pressed = btn.getAttribute('aria-pressed') === 'true';
+        btn.setAttribute('aria-pressed', String(!pressed));
+        btn.classList.toggle('ring-2', !pressed);
+        btn.classList.toggle('ring-indigo-500', !pressed);
+        applyFilter(sectionEl);
+      });
+    });
+
+    // 監聽「清除」按鈕（.clear-tags）
+    const clearBtn = sectionEl.querySelector('.clear-tags');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        resetTagUI(sectionEl, true);
+        applyFilter(sectionEl);
+      });
+    }
+  }
+
+  // 對每個分頁建立一次監聽
+  sections.forEach(setupTagFilteringFor);
+
+  // ===== 初始化：只顯示第一個 active 的分頁 =====
+  const firstActive = document.querySelector('.tab-content.active');
+  const initialTab = firstActive ? firstActive.id : (sections[0] && sections[0].id);
+  if (initialTab) setActiveTab(initialTab);
 </script>
+
 
 </body>
 </html>
