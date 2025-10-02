@@ -1388,17 +1388,22 @@ PBS Kids 的教育卡通，故事書村的
       .map(b => b.dataset.tag);
   }
 
-  function applyFilter(sectionEl) {
-    if (!sectionEl) return;
-    const selected = getSelectedTags(sectionEl);
-    const cards = Array.from(sectionEl.querySelectorAll('article[data-tags]'));
+function applyFilter(sectionEl) {
+  if (!sectionEl) return;
+  const selected = getSelectedTags(sectionEl);
+  const cards = Array.from(sectionEl.querySelectorAll('article[data-tags]'));
 
-    cards.forEach(card => {
-      const tags = (card.getAttribute('data-tags') || '').split(',').map(s => s.trim());
-      const show = selected.length === 0 || selected.some(t => tags.includes(t));
-      card.style.display = show ? '' : 'none';
-    });
-  }
+  cards.forEach(card => {
+    const tags = (card.getAttribute('data-tags') || '')
+      .split(',')
+      .map(s => s.trim())
+      .filter(Boolean);
+
+    // AND：所有已選標籤都必須在卡片的 data-tags 內
+    const show = selected.length === 0 || selected.every(t => tags.includes(t));
+    card.style.display = show ? '' : 'none';
+  });
+}
 
   function resetTagUI(sectionEl, clear = true) {
     // clear=true：把該分頁所有快速篩選都歸零
